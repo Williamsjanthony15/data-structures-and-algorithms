@@ -28,7 +28,13 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
+  const strings = [];
+  arr.forEach(function(value, i){
+    addExclamation.push(`${value}!`);
+  });
+  return strings
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -40,6 +46,12 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
+  const upperCaseArray = [];
+  arr.forEach( function (value, i) {
+    let upperCase =  value.toUpperCase();
+    upperCaseArray.push(upperCase);
+  });
+  return upperCaseArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,9 +66,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+  return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, callback) => {
+  const answer = [];
+  word.forEach( (word) => {
+    answer.push(callback(word));
+  });
+return answer;
   // Solution code here...
 };
 
@@ -78,9 +96,14 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
   // Solution code here...
 };
 
@@ -104,6 +127,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let groceryList = [];
+  availableItems.forEach((element) => {
+    if(element.available) {
+      groceryList.push(element.name);
+    }
+  });
+  return groceryList; 
 };
 
 /* ------------------------------------------------------------------------------------------------

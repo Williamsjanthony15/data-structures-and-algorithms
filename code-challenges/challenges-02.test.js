@@ -6,7 +6,9 @@ CHALLENGE 1 - Review
 
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------------------------- */
+const addBirthYearProperty = (obj, year) => {
+
 const numbers = [1, 2, 3];
 
 const raisedToTheThird = (arr) => {
@@ -86,10 +88,26 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
+
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
+
+CHALLENGE 5 - Stretch Goal
+
+Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
+
+The function should modify the object in place. Do not use a return statement.
+
+For example:
+const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
+setStatusAsAuthor(people);
+console.log(people[1].isAuthor) prints true
+------------------------------------------------------------------------------------------------ */
+
+const setStatusAsAuthor = (people) => {
+
 CHALLENGE 8 - Stretch Goal
 
 Write a function that, given an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
@@ -100,10 +118,30 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
+
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
+
+CHALLENGE 6 - Stretch Goal
+
+Write a function that accepts two arrays. Append the values from the second array into the first,
+maintaining the ordering.
+
+The function should modify the first array in place. Do not use a return statement.
+
+For example:
+const a = [1, 2]; NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
+const b = [3, 4];
+append(a, b);
+console.log(a) prints [1, 2, 3, 4]
+------------------------------------------------------------------------------------------------ */
+
+const append = (arr1, arr2) => {
+  // Solution code here...
+
+
 CHALLENGE 9 - Stretch Goal
 
 Use the snorlaxAbilities data, below, for this challenge.
@@ -194,6 +232,7 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -203,7 +242,11 @@ All the code below will verify that your functions are working to solve the chal
 
 DO NOT CHANGE any of the below code.
 
+
+Run your tests from the console: jest challenges-02.test.js
+
 Run your tests from the console: jest challenges-07.test.js
+
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -214,18 +257,63 @@ describe('Testing challenge 1', () => {
 });
 
 describe('Testing challenge 2', () => {
+
+  test('It should append without modifying the oiginal', () => {
+    const a = 'This is my story.';
+    const b = appendTheEnd(a);
+
+    expect(a).toStrictEqual('This is my story.');
+    expect(b).toStrictEqual('This is my story. The end.');
+
   test('It should add one to all the numbers in the array', () => {
     expect(addOne([2, 3, 5, 11])).toStrictEqual([3, 4, 6, 12]);
+
   });
 });
 
 describe('Testing challenge 3', () => {
+
+  test('It should append by modifying the oiginal', () => {
+    const a = ['Yes', 'it', 'is'];
+    appendFirstToLast(a);
+
+    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
+
   test('It should add a question mark to the end of each string', () => {
     expect(addQuestion(['hello', '301', 'students'])).toStrictEqual(['hello?', '301?', 'students?']);
+
   });
 });
 
 describe('Testing challenge 4', () => {
+
+  test('It should add a property to an object', () => {
+    const a = { fullName: 'Octavia Butler' };
+    addBirthYearProperty(a, 1947);
+
+    expect(a.yearBorn).toStrictEqual(1947);
+  });
+});
+
+xdescribe('Testing challenge 5', () => {
+  test('It should add a property to every object in an array', () => {
+    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    setStatusAsAuthor(a);
+
+    expect(a[0].isAuthor).toStrictEqual(true);
+    expect(a[1].isAuthor).toStrictEqual(true);
+    expect(a[2].isAuthor).toStrictEqual(true);
+  });
+});
+
+xdescribe('Testing challenge 6', () => {
+  test('It should append the second array to the first', () => {
+    const a = [1, 2, 3, 4];
+    const b = [5, 6, 7, 8];
+    append(a, b);
+
+    expect(a).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+
   test('It should return two raised to the power of the integer', () => {
     expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -302,5 +390,6 @@ xdescribe('Testing challenge 10', () => {
       { name: 'special-attack', total: 74, },
     ]);
     expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
+
   });
 });

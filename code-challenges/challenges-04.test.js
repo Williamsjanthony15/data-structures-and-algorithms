@@ -22,16 +22,14 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // const reult = [];
-  // arr.forEach(animal => {
-  //   let updatedAnimal = callback(animal)
-  //   result.push(updatedAnimal);
-  // });
-  // return result;
-  return arr.map(callback);
-};
+const newArr = [];
+  arr.forEach(item => newArr.push(callback(item)));
+  
+  return newArr;
+};  
+
+
   // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -41,10 +39,9 @@ Write a function called sortNames that takes an array of names and sorts them al
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
-const sortNames = (arr) => {
+const sortNames = arr => arr.sort();
   // Solution code here...
-};
-
+  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -53,9 +50,8 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbers = (arr) => {
+const sortNumbers = arr => arr.sort((a, b) => a - b);
   // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -64,21 +60,22 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
+const sortBackwards = (arr) => arr.sort((a, b) => b - a);
 
-const sortBackwards = (arr) => {
-  // Solution code here...
+// const sortBackwards = (arr) => {
+//   // Solution code here...
 
-  // return arr.sort( (a,b) => {
-  //   if (a > b) {
-  //     return -1;
-  //   } else if (b < a) {
-  //     return 1;
-  //   } else {
-  //     return 0;
-  //   }
-    return b - a;
-  });
-};
+//   // return arr.sort( (a,b) => {
+//   //   if (a > b) {
+//   //     return -1;
+//   //   } else if (b < a) {
+//   //     return 1;
+//   //   } else {
+//   //     return 0;
+//   //   }
+//     return b - a;
+//   });
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -90,10 +87,12 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-  return arr.sort();
-};
+const alphabetitize = (arr) => arr.sort();
+
+// const alphabetize = (arr) => {
+//   // Solution code here...
+//   return arr.sort();
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -107,10 +106,10 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
-
-const sortByPrice = (arr) => {
-  // Solution code here...
-};
+const sortByPrice = (arr) => arr.sort((a, b) => a.price - b.price);
+// const sortByPrice = (arr) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

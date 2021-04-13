@@ -28,6 +28,7 @@ const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
 }
 
+{im trying}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 

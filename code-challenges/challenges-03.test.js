@@ -14,7 +14,7 @@ const addTwo = (arr) => {
     newArray.push(sumNumber);
 };
   return(newArray);
-
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 

@@ -20,6 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  return Object.keys(obj).map(keys => `<li>${keys}: ${obj [keys]}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,8 +146,9 @@ CHALLENGE 6
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 let findShortest = (data) => {
-  // Solution code here...
+  return data.reduce((a, b) => Number(a.height) < Number(b.height) ? a : b).name;
 };
 
 /* ------------------------------------------------------------------------------------------------

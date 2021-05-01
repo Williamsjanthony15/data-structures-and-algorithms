@@ -26,17 +26,19 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-}
+  return starWarsArr.sort((a,b) => parseInt(b.height) - parseInt(a.height));
+};
 
-{im trying}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  arr.splice(idx, 3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +68,7 @@ const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
   for(let i =0; i <= str.length; i++){
-    result.push(str.splice(i);)
+    result.push(str.splice(i));
   }
   return result;
 };
@@ -130,8 +132,7 @@ const listFoods = (recipe) => {
   // Solution code here...
   recipe.ingredients.forEach(ingredient => {
     let withoutAmounts = ingredient.slice(ingredient.indexof(' ') + 1)
-    let withoutUnits = 
-  })
+  });
   return result;
 };
 

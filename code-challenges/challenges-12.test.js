@@ -6,9 +6,11 @@ CHALLENGE 1 - Review
 Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'. 
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 const replaceZeros = (string) => {
-  // Solution code here...
-}
+  let regex =/[0]/g;
+  return string.replace(regex, 'zero');
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -18,8 +20,10 @@ Write a function named validatePin that uses a regular expression pattern to val
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 const validatePin = (pin) => {
-  // Solution code here...
+  let regex = /^\d{4}$/;
+  return regex.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,8 +34,9 @@ Write a function named validateWord that uses a regular expression pattern to va
 If the word is between 5 and 10 characters long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 const validateWord = (word) => {
-  // Solution code here...
+  let regex = /^[a-zA-Z]{5,10}$/;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,9 +47,10 @@ Write a function named hasNumber that uses a regular expression pattern to deter
 If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
 const hasNumber = (string) => {
-  // Solution code here...
-  return /[A-Z]
+  let r = /[a-zA-Z]\d+/;
+  return r.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------

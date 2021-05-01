@@ -59,7 +59,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  return arr.reduce( (answerSoFar) => answerSoFar + 1, 0):
+  return arr.reduce( (answerSoFar) => answerSoFar + 1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ let starWarsData = [{
 //   }, []);
 // };
 
-const returnNames = (arr) => arr.reduce((x, y) +> {
+const returnNames = (arr) => arr.reduce((x, y) => {
   x.push(y.name);
   return x;
 },[]);

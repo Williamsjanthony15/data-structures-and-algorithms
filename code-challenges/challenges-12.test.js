@@ -35,9 +35,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 // Solution code here...
-const validateWord = (word) => {
-  let regex = /^[a-zA-Z]{5,10}$/;
-};
+const validateWord = word => (/^[A-Za-z]{5,10}$/).test(word);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4

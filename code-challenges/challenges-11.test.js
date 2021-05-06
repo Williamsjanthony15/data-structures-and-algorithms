@@ -20,7 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  return Object.keys(obj).map(keys => `<li>${keys}: ${obj [keys]}</li>`);
+  return Object.keys(obj).map(key => `<li>${key}: ${obj[key]}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,9 +51,9 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
+const totalSum = input => input.reduce((prevSum, current) => prevSum + current.reduce((prevSum, current) => prevSum + current, 0), 0);
   // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -67,11 +67,8 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
-  return input.map(arr => arr.filter(x => ((typeof x === 'number') && x % (5 === 0))
-  .map(x => Math.pow(2, x))),
-};
+const divisibleByFiveTwoToThePower = input => input.map(arr => arr.filter(num => typeof (num) === 'number' && num % 5 === 0).map(num => 2 ** num));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -135,10 +132,11 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-let findMaleAndFemale = (data) => {
+let findMaleAndFemale = data =>  data.filter(charecter => ['male'
+, 'female'].includes(charecter.gender)).map(charecter => charecter.name).join(' and ');
   // Solution code here...
-  return data.filter(x => (x.gender  === 'male') || (x.gender === 'female')).map(x => x.name).join(' and ');
-};
+ 
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 

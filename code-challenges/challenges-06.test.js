@@ -23,7 +23,7 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 // Solution code here...
-const getNames = (arr) => arr.map(person => person.name.split('').reverse().join(''));
+const getNames = arr => arr.map(person => person.name.split('').reverse().join(''));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -33,7 +33,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => `${str} The end.`;
   // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3

@@ -54,24 +54,16 @@ let characters = [
   }
 ];
 
-const sortByChildren = (charArray) => {
+const sortByChildren = charArray => charArray.sort((a, b) => {
   // Solution code here...
-  charArray.sort((a, b) => {
-    if (a.children < b.children) {
-      return -1;
-    } else if (a.children > b.children) {
-      return 1;
-    } else {
-      charArray.sort((a, b) => {
-        if (a.house < b.house) {
-          return -1;
-        } else if (a.house > b.house) {
-          return 1;
-        }
-      });
-    }
-  });
-};
+  if (a.children.length !== b.children.length) {
+    return a.children.length - b.children.length;
+  } else if (a.house.localeCompare(b.house) !== 0) {
+    return a.house.localeCompare(b.house);
+  } else {
+    return 0;
+  }
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2

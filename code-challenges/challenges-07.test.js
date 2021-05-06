@@ -47,9 +47,9 @@ CHALLENGE 3
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
+const joinArray = arr => arr.join(' '); 
   // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -64,11 +64,11 @@ For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
-const howMuchPencil = (str) => {
+const howMuchPencil = str => {
   let result = [];
   // Solution code here...
-  for(let i =0; i <= str.length; i++){
-    result.push(str.splice(i));
+  for(let i = 0; i <= str.length; i++) {
+    result.push(str.slice(i));
   }
   return result;
 };
@@ -127,11 +127,12 @@ const gruffaloCrumble = {
 };
 
 
-const listFoods = (recipe) => {
-  let result = [];
+const listFoods = recipe => {
+  const result = [];
   // Solution code here...
   recipe.ingredients.forEach(ingredient => {
-    let withoutAmounts = ingredient.slice(ingredient.indexof(' ') + 1)
+    let withoutUnit = ingredient.slice(ingredient.indexOf(' ') + 1);
+    result.push(withoutUnit.slice(withoutUnit.indexOf(' ') + 1));
   });
   return result;
 };

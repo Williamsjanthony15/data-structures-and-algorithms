@@ -27,8 +27,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
-  let newarr = arr.map(item => item.split(''));
-  let newstMap = newArr.map(element => element[0]);
+  let newArr = arr.map(item => item.split(''));
+  let newestMap = newArr.map(element => element[0]);
   return newestMap;
 };
 

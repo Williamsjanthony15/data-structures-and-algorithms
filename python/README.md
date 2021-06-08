@@ -1,5 +1,10 @@
 # Data Structures and Algorithms
 
+## Table Of contents
+
+### [CC 1](/python/code_challenges/array_reverse/README.md)
+
+
 ## Language: `Python`
 
 ### Folder and Challenge Setup

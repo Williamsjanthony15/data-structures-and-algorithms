@@ -2,7 +2,9 @@ class Node:
     def __init__(self, value, next = None):
         self.value = value
         self.next = next
-        self.flag = 0
+
+    def __str__(self):
+        return str(self.value)
 
 class LinkedList:
     def __init__(self, head = None):
@@ -13,16 +15,27 @@ class LinkedList:
 
         if self.head is not None:
             node.next = self.head # -> pears, -> oranges, -> apples
-            self.head = node #HEAD: pears -> oranges -> apples
+        self.head = node #HEAD: pears -> oranges -> apples
 
-    def includes(self):
-        while (self.head != None):
-            if (self.flag == 1) :
+    def __str__ (self):
+        list_input = []
+        if self.head is None:
+            return  "there is no node value"
+        current = self.head
+
+        while current is not None:
+            list_input.append(current.value)
+            current = current.next
+
+
+    def includes(self, value):
+        current = self.head
+
+        while current.value is not None:
+            if current.value == value:
                 return True
-
-            self.flag = 1;
-            node = node.next;
-        return False;
+            current = current.next
+        return False
 
 
 #

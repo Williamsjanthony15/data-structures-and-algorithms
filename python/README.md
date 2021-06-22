@@ -4,7 +4,8 @@
 
 ### [CC 1](/python/code_challenges/array_reverse/README.md)
 ### [CC 2](/python/code_challenges/Array_Shift/README.md)
-### [CC 3](/python/code_challenges/array-binary-search/img/README.md)
+### [CC 3](/python/code_challenges/array-binary-search/README.md)
+### [CC 6](/python/code_challenges/linked_list/README.md)
 
 
 ## Language: `Python`

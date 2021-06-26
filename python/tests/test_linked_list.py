@@ -119,3 +119,28 @@ def test_Can_successfully_insert_a_node_after_the_last_node_of_the_linked_list()
         assert current.value == expected[index]
         index+=1
         current = current.next
+
+def test_kth_from_end_works():
+    my_list = LinkedList(Node('z' ,(Node('a', Node( 'b', Node( 'c'))))))
+    actual = my_list.kth_from_end(2)
+    expected = 'a'
+    assert actual == expected
+
+def test_kth_from_end_k_too_large():
+    my_list = LinkedList(Node('z' ,(Node('a', Node( 'b', Node( 'c'))))))
+    actual = my_list.kth_from_end(4)
+    expected = 'choose a smaller number'
+    assert actual == expected
+
+def test_kth_from_end_k_negative():
+    my_list = LinkedList(Node('z' ,(Node('a', Node( 'b', Node( 'c'))))))
+    actual = my_list.kth_from_end(-2)
+    expected = 'Choose a positive number'
+    assert actual == expected
+
+def test_kth_from_end_list_only_1():
+    my_list = LinkedList()
+    my_list.insert('matthew')
+    actual = my_list.kth_from_end(2)
+    expected = 'List only has 1 item'
+    assert actual == expected

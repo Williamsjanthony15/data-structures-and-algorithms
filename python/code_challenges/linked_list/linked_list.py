@@ -94,4 +94,45 @@ def kth_from_end(self, k):
             temp = temp.next
         return temp.value
 
-        
+
+
+# __ EXMAPLE __ TESTS
+
+# from linked_list import LinkedList, Node
+
+# def test_now_ll():
+#     ll = LinkedList()
+#     assert ll
+
+# def test_nodes():
+#     ll = LinkedList()
+#     node1 = Node('p')
+#     node2 = Node('y')
+#     node3 = Node('t')
+#     node4 = Node('h')
+#     node5 = Node('o')
+#     node6 = Node('n')
+#     ll.head = node1
+#     node1.next = node2
+#     node2.next = node3
+#     node3.next = node4
+#     node4.next = node5
+#     node5.next = node6
+#     assert ll.value == 'p'
+#     assert ll.next.value == 'y'
+#     assert ll.next.next.value == 't'
+#     assert ll.next.next.next.value == 'h'
+#     assert ll.next.next.next.next.value == 'o'
+#     assert ll.next.next.next.next.next.value == 'n'
+
+# # ____ EXMAPLE ____ TESTS
+
+# class Node():
+#     def __init__(self, value, next=node):
+#         self.value = value
+#         self.next = next
+# class linkedList:
+#     def __init__(self, head=None):
+#         self.head = head
+
+

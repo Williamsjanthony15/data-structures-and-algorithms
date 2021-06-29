@@ -94,6 +94,24 @@ def kth_from_end(self, k):
             temp = temp.next
         return temp.value
 
+list1 = LinkedList(1, Node(3, Node(5, Node(7, Node(9)))))
+list2 = LinkedList(2, Node(4, Node(6, Node(8, Node(10)))))
+
+def zipLists(list1, list2):
+  list1_current = list1.head
+  list2_current = list2.head
+
+  while list1_current and list2_current != None:
+          list1_next = list1_current.next
+          list2_next = list2_current.next
+
+          list1_current.next = list2_current
+          list2_current.next = list1_next
+
+          list1_current = list1_next
+          list2_current = list2_next
+
+  list2.head = list2_current
 
 
 # __ EXMAPLE __ TESTS

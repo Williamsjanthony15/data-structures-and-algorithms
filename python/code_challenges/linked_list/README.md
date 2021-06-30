@@ -14,3 +14,5 @@ Colab - Michael and Tony.
 
 ## [Code Challenge 7]
 https://github.com/Williamsjanthony15/data-structures-and-algorithms/pull/21
+
+## ![Code Challenge 7}(img/Linked-List-Zip.jpg)

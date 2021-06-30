@@ -6,7 +6,7 @@
 ### [CC 2](/python/code_challenges/Array_Shift/README.md)
 ### [CC 3](/python/code_challenges/array-binary-search/README.md)
 ### [CC 6](/python/code_challenges/linked_list/README.md)
-
+### [CC 7](/python/code_challenges/linked_list/README.md)
 
 ## Language: `Python`
 

@@ -72,27 +72,27 @@ class LinkedList:
             current = current.next
         print("Target not within list")
 
+    def kth_from_end(self, k):
+        length = -1
+        temp = self.head
+        while temp is not None:
+            temp = temp.next
+            length += 1
+        if length < 2:
+            return 'List only has 1 item'
+        elif k < 0:
+            return 'Choose a positive number'
+        elif k >= length:
+            return 'choose a smaller number'
+        else:
+            temp = self.head
+            target = length - k
+            for i in range(0, target):
+                temp = temp.next
+            return temp.value
 if __name__ == "__main__":
     pass
 
-def kth_from_end(self, k):
-    length = -1
-    temp = self.head
-    while temp is not None:
-        temp = temp.next
-        length += 1
-    if length < 2:
-        return 'List only has 1 item'
-    elif k < 0:
-        return 'Choose a positive number'
-    elif k >= length:
-        return 'choose a smaller number'
-    else:
-        temp = self.head
-        target = length - k
-        for i in range(0, target):
-            temp = temp.next
-        return temp.value
 
 list1 = LinkedList(1, Node(3, Node(5, Node(7, Node(9)))))
 list2 = LinkedList(2, Node(4, Node(6, Node(8, Node(10)))))

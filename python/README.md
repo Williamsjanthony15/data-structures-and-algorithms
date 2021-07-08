@@ -7,6 +7,7 @@
 ### [CC 3](/python/code_challenges/array-binary-search/README.md)
 ### [CC 6](/python/code_challenges/linked_list/README.md)
 ### [CC 7](/python/code_challenges/linked_list/README.md)
+### [CC 10](/python/code_challenges/stack-queue-pseudo/README.md)
 
 ## Language: `Python`
 

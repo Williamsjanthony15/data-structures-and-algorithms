@@ -12,9 +12,9 @@ def string_balance(myStr):
                 (open_list[pos] == stack[len(stack)-1])):
                 stack.pop()
             else:
-                return "Unbalanced"
+                return False
     if len(stack) == 0:
-        return "Balanced"
+        return True
     else:
-        return "Unbalanced"
+        return False
   

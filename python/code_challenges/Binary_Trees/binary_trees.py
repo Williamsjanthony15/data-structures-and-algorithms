@@ -74,6 +74,23 @@ class BinaryTree:
 
     return order
 
+  def maxData(self):
+    if self.root is None:
+      return "No data"
+
+    def findMax(root):
+
+      dataRoot = root.value
+      leftDR = findMax(root.left)
+      rightDR = findMax(root.right)
+      if (leftDR > dataRoot):
+        dataRoot = leftDR
+      if (rightDR > dataRoot):
+        dataRoot = rightDR
+      return dataRoot
+
+    
+
 class BinarySearchTree(BinaryTree):
   
   def __init__(self, root=None):

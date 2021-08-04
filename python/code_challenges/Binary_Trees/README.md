@@ -12,5 +12,7 @@ Simplified. Quickist route to complete.
 
 ## ![Code Challenge 2](img/Fizz_Tree_Buzz.jpg)
 
+pull request == 
 
+https://github.com/Williamsjanthony15/data-structures-and-algorithms/pull/31
 

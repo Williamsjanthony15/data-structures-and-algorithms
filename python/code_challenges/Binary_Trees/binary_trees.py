@@ -89,8 +89,6 @@ class BinaryTree:
         dataRoot = rightDR
       return dataRoot
 
-    
-
 class BinarySearchTree(BinaryTree):
   
   def __init__(self, root=None):
@@ -140,3 +138,46 @@ class BinarySearchTree(BinaryTree):
         return True
       else:
         return False
+
+
+class newNode:
+  def __init__(self, value):
+    self.key = value
+    self.child = []
+
+def kTree (A, b, c, d, ind):
+
+  if (b <= 0):
+    return None
+
+  bNode = newNode(A[ind[0]])
+  if (bNode == None):
+    return None
+
+  for i in range(c):
+    if (ind[0] < b - 1 and d > 1):
+      ind[0] += 1
+
+      bNode.child.append(kTree(A, b, c, d - 1, ind))
+
+    else:
+      bNode.child.append(None)
+  return bNode
+
+def fizzBuzz():
+  
+  for fizz_buzz in range (kTree):
+
+    if fizz_buzz % 15 == 0:
+      print('FIZZBUZZ')
+      continue
+
+    elif fizz_buzz % 3 == 0:
+      print('FIZZ')
+      continue
+
+    elif fizz_buzz % 5 == 0:
+      print('BUZZ')
+      continue
+
+    print(fizz_buzz)

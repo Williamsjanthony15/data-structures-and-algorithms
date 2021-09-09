@@ -8,7 +8,7 @@
 ### [CC 6](/python/code_challenges/linked_list/README.md)
 ### [CC 7](/python/code_challenges/linked_list/README.md)
 ### [CC 10](/python/code_challenges/stack-queue-pseudo/README.md)
-
+### [CC 30](/python/code_challenges/Hash_tables/README.md)
 ## Language: `Python`
 
 ### Folder and Challenge Setup

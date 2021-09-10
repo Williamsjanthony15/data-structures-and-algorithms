@@ -24,3 +24,6 @@ class Hashtable:
 
         bucket = self.buckets[index]
         bucket.insert([key, value])
+
+    def repeatedWord(self, value):
+        word = 

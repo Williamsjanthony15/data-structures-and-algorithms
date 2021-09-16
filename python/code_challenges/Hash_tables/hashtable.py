@@ -1,4 +1,5 @@
 from code_challenges.linked_list import linked_list
+from collections import Counter
 
 class Hashtable:
     def __init__(self, size=1024):
@@ -25,5 +26,12 @@ class Hashtable:
         bucket = self.buckets[index]
         bucket.insert([key, value])
 
-    def repeatedWord(self, value):
-        word = 
+    def repeat(input):
+        word = input.split('')
+        dict = Counter(word)
+
+        for i in word:
+            if dict[i]>1:
+                print (i)
+                return
+            
